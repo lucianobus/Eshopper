@@ -1,3 +1,23 @@
+<?php
+  $BDProductos = array( 
+    array(1, 2, 3, 4, 5, 6 ,7),                                       //El ID
+    array("Blusa", "Lentes", "Playera", "Pantalón", "Vestido", "playera roja", "caletines"), //La Descripción
+    array(100, 350, 200, 420, 250, 170, 60),                             //El Precio
+    array("Dama", "Caballero", "Caballero", "Dama", "Dama", "caballero", "caballero"));   //Categoría
+  $iProductos = 7; //Indica el No. de Productos
+
+  $BDAlmacen = array( 
+    array(1, 2, 3, 4, 5), //El IDProducto
+    array(0,10, 5,15, 3)); //Las Existencias
+
+  $iAlmacen = 2; //El No. de existencias
+  $BDVentas = array(
+    array(2,3), //El IDProducto
+    array(2,1), //La Cantidad
+    array(700, 200)); //El Monto
+  $iVentas = 2; //El No. de ventas al momento
+?>
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -54,7 +74,7 @@
 					</div>
 					<H3>SOFTWARE PUNTO DE VENTA </H3>
 					<div class="col-sm-8">
-						Por: LUCIANO BUSTAMANTE
+						Por: LUCIANO BUSTAMANTE y PEÑA SARACHO
 						<div class="shop-menu pull-right">
 							<ul class="nav navbar-nav">
 								<li><a href="checkout.php"><i class="fa fa-crosshairs"></i> Pagar</a></li>
@@ -149,7 +169,8 @@
 						<div class="panel-group category-products" id="accordian"><!--category-productsr-->
 							<div class="panel panel-default">
 								<div class="panel-heading">
-									<h4 class="panel-title"><a href="#">Categoría 1</a></h4>
+									<h4 class="panel-title"><a href="#">Damas</a></h4>
+									<h4 class="panel-title"><a href="#">Caballeros</a></h4>
 								</div>
 							</div>
 						</div><!--/category-products-->
@@ -164,26 +185,32 @@
 				<div class="col-sm-9 padding-right">
 					<div class="features_items"><!--features_items-->
 						<h2 class="title text-center">Catálogo de Productos</h2>
+					     	<?php
+                                for ($i=0; $i < $iProductos;$i++){ 
+                             ?>
 						<div class="col-sm-4">
 							<div class="product-image-wrapper">
 								<div class="single-products">
 										<div class="productinfo text-center">
-											<img src="images/home/product1.jpg" alt="" />
-											<h2>$56</h2>
+								           <?php
+								           $img = $BDProductos[0][$i];
+								           ?>
+											<img src="images/home/<?php echo $img; ?>.jpg" width = "210" height = "180" alt="" />
+											<h2><?php echo $BDProductos [2][$i]; ?> </h2>
 											<p>Producto 1</p>
 											<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Agregar al Carrito</a>
 										</div>
 										<div class="product-overlay">
 											<div class="overlay-content">
-												<h2>$56</h2>
-												<p>Producto 1</p>
+												<h2><?php echo $BDProductos [2][$i]; ?> </h2>
+												<p><?php echo $BDProductos [1][$i]; ?></p>
 												<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Agregar al Carrito</a>
 											</div>
 										</div>
 								</div>								
 							</div>
 						</div>
-						
+						<?php } ?>
 					</div><!--features_items-->
 					
 					
@@ -201,6 +228,19 @@
 													<img src="images/home/recommend1.jpg" alt="" />
 													<h2>$50</h2>
 													<p>Producto Esp 1</p>
+													<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Agregar al Carrito</a>
+												</div>
+												
+											</div>
+										</div>
+									</div>
+									<div class="col-sm-4">
+										<div class="product-image-wrapper">
+											<div class="single-products">
+												<div class="productinfo text-center">
+													<img src="images/home/recommend1.jpg" alt="" />
+													<h2>$150</h2>
+													<p>Producto Esp 2</p>
 													<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Agregar al Carrito</a>
 												</div>
 												
