@@ -1,5 +1,5 @@
 <?php
-   $BDProductos = array(0,"CERO",0,"");
+  $BDProductos = array(0,"CERO",0,"");
  $i=0; $iProductos=1; 
  $filas=file('archivo.txt'); 
  
@@ -24,13 +24,14 @@
   $iVentas = 2; //El No. de ventas al momento
 ?>
 
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="Software Punto de Venta" content="">
-    <meta name="Luciano Bustamante" content="">
+    <meta name="Alejandro Cisneros" content="">
     <title>Inicio | E-Shopper</title>
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/font-awesome.min.css" rel="stylesheet">
@@ -58,8 +59,9 @@
 					<div class="col-sm-6">
 						<div class="contactinfo">
 							<ul class="nav nav-pills">
-								<li><a href="#"><i class="fa fa-phone"></i> +52 618 120 56 89</a></li>
-								<li><a href="#"><i class="fa fa-envelope"></i> luciano bustamante@gmail.com</a></li>
+								<li><a href="#"><i class="fa fa-phone"></i> +52 618 201 1727</a></li>
+								<li><a href="#"><i class="fa fa-envelope"></i> Peñiñicasp
+								@gmail.com</a></li>
 							</ul>
 						</div>
 					</div>
@@ -78,13 +80,12 @@
 							<a href="index.php"><img src="images/home/logo.png" alt="" /></a>
 						</div>						
 					</div>
-					<H3>SOFTWARE PUNTO DE VENTA </H3>
+					<H3>SOFTWARE PUNTO DE VENTA</H3>
 					<div class="col-sm-8">
-						Por: LUCIANO BUSTAMANTE y PEÑA SARACHO
+						Por: Peña Saracho y Luciano Bustamante
 						<div class="shop-menu pull-right">
 							<ul class="nav navbar-nav">
-								<li><a href="agregarproducto.php" target="_blank"><i class="fa fa-plus"></i>Agregar
-								</a></li>
+								<li><a href="agregarproductos.php" target="_blank"><i class="fa fa-plus"></i>Agregar</a></li> 
 								<li><a href="checkout.php"><i class="fa fa-crosshairs"></i> Pagar</a></li>
 								<li><a href="cart.php"><i class="fa fa-shopping-cart"></i> Carrito</a></li>
 								<li><a href="login.php"><i class="fa fa-lock"></i> Login</a></li>
@@ -189,43 +190,46 @@
 					
 					</div>
 				</div>
-				
+
 				<div class="col-sm-9 padding-right">
 					<div class="features_items"><!--features_items-->
-						<h2 class="title text-center">Catálogo de Productos</h2>
-					     	<?php
-					     	    $n=4;
-                      for ($i=1; $i < $iProductos;$i++){ 
-                             ?>
+						<h2 class="title text-center">Catálogo de Productos</
+						h2>
+						<?php
+						 $n=4;
+						 for ($i=1; $i < $iProductos; $i++){
+
+						?>
 						<div class="col-sm-4">
 							<div class="product-image-wrapper">
 								<div class="single-products">
 										<div class="productinfo text-center">
-								           <?php
-								           $img= $BDProductos[$n];
-								           $productoB = $BDProductos[$n+2];
-								           $precioB = $BDProductos[$n+1];
-								           ?>
-											<img src="images/home/<?php echo $img; ?>.jpg" alt="" width=180 height=150 alt="" />
-											<h2><?php echo $productoB; ?> </h2>
-											<p><?php echo $precioB;?></p>
+											<?php
+											$img = $BDProductos[$n];
+											$productoB = $BDProductos[$n+1];
+											$precioB = $BDProductos[$n+2];
+										?>
+											<img src="images/home/<?php echo $img;?>
+											.jpg" width ="210" height="180"alt="" />
+											<h2><?php echo $productoB; ?></h2>
+											<p><?php echo $precioB; ?></p>
 											<a href="cart.php?producto=<?php echo $productoB;?>&precio=<?php echo $precioB;?>" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Agregar al Carrito</a>
 										</div>
 										<div class="product-overlay">
 											<div class="overlay-content">
-												<h2><?php echo $precioB; ?> </h2>
-												<p><?php echo $productoB; ?></p>
+												<h2><?php echo $precioB;?></h2>
+												<p><?php echo $productoB;?></p>
 												<a href="cart.php?producto=<?php echo $productoB;?>&precio=<?php echo $precioB;?>" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Agregar al Carrito</a>
 											</div>
 										</div>
 								</div>								
 							</div>
 						</div>
-						<?php 
-						    $n+=4;
-					       } 
-					?>
-					</div><!--features_items-->
+					<?php 
+             $n+=4;
+              }
+           ?>
+				 </div><!--features_items-->
 					
 					
 					
@@ -253,7 +257,7 @@
 											<div class="single-products">
 												<div class="productinfo text-center">
 													<img src="images/home/recommend1.jpg" alt="" />
-													<h2>$150</h2>
+													<h2>$50</h2>
 													<p>Producto Esp 2</p>
 													<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Agregar al Carrito</a>
 												</div>

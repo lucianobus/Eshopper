@@ -1,0 +1,3 @@
+ Playera Azul,250
+ Vestido,450
+ Blusa,100

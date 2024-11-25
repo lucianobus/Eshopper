@@ -1,5 +1,6 @@
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -182,6 +183,14 @@
 						</tr>
 					</thead>
 					<tbody>
+						<?php
+						 if(file_exists('carritodecompras.txt')){
+         $content = trim(file_get_contents('carritodecompras.txt'), PHP_EOL);
+         $lineas = explode(PHP_EOL, $content);
+         foreach($lineas as $linea) {
+            list($productoE, $precioE) = explode(',', $linea);
+           //si el archivo tiene enters el programa truena
+         ?>
 						<tr>
 							<td class="cart_product">
 								<a href=""><img src="images/cart/one.png" alt=""></a>
@@ -207,7 +216,10 @@
 								<a class="cart_quantity_delete" href=""><i class="fa fa-times"></i></a>
 							</td>
 						</tr>
-												
+							<?php
+				} 
+				}
+				?>					
 						<tr>
 							<td colspan="4">&nbsp;</td>
 							<td colspan="2">
