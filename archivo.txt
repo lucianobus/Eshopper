@@ -5,4 +5,3 @@
 5, Vestido,450,Damas
 6, Playera Roja,300,Caballeros
 7, Calcetines,80,Caballeros
-8, Guantes,70,Caballeros

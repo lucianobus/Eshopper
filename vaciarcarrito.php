@@ -8,4 +8,4 @@
    <script>window.opener.location.reload;</script>
    <center>
    <a href="javascript:window.close();">Volver a la página anterior</a>
-   </center> 
+   </center>

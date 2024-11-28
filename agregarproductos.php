@@ -11,8 +11,8 @@
    if($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['operacion'])){
       if($_POST['operacion'] === GUARDAR){
          $file = @fopen("archivo.txt", "a"); 
-         fwrite($file, $ID, $producto,$precio,$categoria".PHP_EOL);
-         fclose($file);      
+         fwrite($file, "$ID, $producto,$precio,$categoria".PHP_EOL);
+         fclose($file);        
    } else {
      if(file_exists('archivo.txt')){
          $content = trim(file_get_contents('archivo.txt'), PHP_EOL);
