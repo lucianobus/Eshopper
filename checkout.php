@@ -34,7 +34,7 @@
 						<div class="contactinfo">
 							<ul class="nav nav-pills">
 								<li><a href="#"><i class="fa fa-phone"></i> +52 671 767 6346</a></li>
-								<li><a href="#"><i class="fa fa-envelope"></i> Alejandrobriava26_15@outlook.com</a></li>
+								<li><a href="#"><i class="fa fa-envelope"></i> analyreyes405@gmail.com</a></li>
 							</ul>
 						</div>
 					</div>					

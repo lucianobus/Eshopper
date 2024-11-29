@@ -106,9 +106,9 @@
 				<div class="col-sm-4 col-sm-offset-1">
 					<div class="login-form"><!--login form-->
 						<h2>Iniciar Sesión</h2>
-						<form action="iniciarsesion.php" method="post" >
-							<input type="text" placeholder="Nombre" name="usuario" />
-							<input type="email" placeholder="Direccion Email" name="email"/>
+						<form action="iniciarsesion.php" method= "post">
+							<input type="text" placeholder="nombre" name="usuario"/>
+							<input type="email" placeholder="direccion email" name="email" />
 							<span>
 								<input type="checkbox" class="checkbox"> 
 								Mantener Sesión
@@ -118,9 +118,8 @@
 					</div><!--/login form-->
 				</div>
 				<div class="col-sm-1">
-					
+					<h2 class="or">OR</h2>
 				</div>
-				<div class="col-sm-4">
 				
 				</div>
 			</div>
